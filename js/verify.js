@@ -220,9 +220,10 @@ window.CONTRACT = {
 ],
 }
 //I used Web3.providers.HttpProvider instead of MetaMask Provider so We can Verify Docs without Wallet
-const web3 = new Web3(new Web3.providers.HttpProvider(window.CONTRACT.network))
+import Web3, { providers } from 'web3'
+const web3 = new Web3(new providers.HttpProvider(window.CONTRACT.network))
 const contract = new web3.eth.Contract(
-  window.CONTRACT.abi,
+	window.CONTRACT.abi,
   window.CONTRACT.address,
 )
 
