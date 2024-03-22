@@ -1,4 +1,4 @@
-
+import Web3 from 'web3'
 //Works without using metamsk 
 //just provide the network address
 
@@ -220,7 +220,7 @@ window.CONTRACT = {
 ],
 }
 //I used Web3.providers.HttpProvider instead of MetaMask Provider so We can Verify Docs without Wallet
-import Web3, { providers } from 'web3'
+
 const web3 = new Web3(new providers.HttpProvider(window.CONTRACT.network))
 const contract = new web3.eth.Contract(
 	window.CONTRACT.abi,
